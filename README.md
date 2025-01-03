@@ -87,10 +87,10 @@ Extensive experiments demonstrate that our method achieves state-of-the-art perf
 <details><summary>Click for Previous todos </summary>
 
 - [x] Release Code based on <a href='https://github.com/THUDM/CogVideo'>CogVideoX-2B</a>
+- [x] Release paper on arxiv
 <!-- - [x] code refactoring -->
 </details>
 
-- [ ] Release paper on arxiv
 - [ ] Benchmark metrics and prompts
 - [ ] Release code of diffuser version of <a href='https://github.com/THUDM/CogVideo'>CogVideoX-2B</a>
 - [ ] Release code based on <a href='https://github.com/THUDM/CogVideo'>CogVideoX-5B</a>
@@ -272,6 +272,16 @@ When you run the command, it will generate the video in the `outputs/multi_promp
 
 - [Presto](prompts_gen_instruction/presto.md): Modified from Presto's instruction, focusing on realistic cinematographic sequences with natural camera movements and temporal progression (ideal for documentary-style or realistic scenarios).
 - [DitCtrl](prompts_gen_instruction/ditctrl.md): Our custom instruction for DiTCtrl, emphasizing creative scene transitions and imaginative scenarios (perfect for artistic and fantasy-based video generation).
+
+### How to visualize the attention maps
+
+The code is also provided, you can run this:
+
+```bash
+  cd sat
+  bash run_visualize.sh
+```
+
 
 
 
