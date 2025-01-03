@@ -1,0 +1,8 @@
+args:
+  seed: 42
+  output_dir: outputs/visualization/cat_mouse
+  adaln_mixin_names: 
+    - 'VisualizeAdaLNMixin'
+  sampling_fps: 8
+  prompts:
+    - "a cat watching a black mouse in a warm living room, the cat sits on the left side of a vintage carpet while the mouse moves on the right near the antique furniture, soft afternoon light through curtains, high quality"
