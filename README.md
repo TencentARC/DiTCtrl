@@ -27,8 +27,8 @@
 </div>
 
 ## 📋 News
-- 2024.12.24 Release Code and demo on CogVideoX-2B!
-
+- [2024.12.24] Release code and demo on CogVideoX-2B!
+- [2025.1.3] Release code of DiT attention map visualization.
 
 ## 🔆Demo
 
