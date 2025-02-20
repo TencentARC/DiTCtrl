@@ -45,3 +45,6 @@ args:
 
   # Only for single prompt case
   single_prompt_length: 0
+  # Only for reweight case
+  reweight_token_idx: 0
+  reweight_scale: -5

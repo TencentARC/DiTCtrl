@@ -258,9 +258,9 @@ def sampling_main(args, model_cls):
                 
                 next_adaln_name = AdaLNMixin_NAMES[(i + 1) % len(AdaLNMixin_NAMES)]
             
-            model.switch_adaln_layer(next_adaln_name)
-            load_checkpoint(model, args)
-            model.eval()
+            # model.switch_adaln_layer(next_adaln_name)
+            # load_checkpoint(model, args)
+            # model.eval()
 
 if __name__ == "__main__":
     if "OMPI_COMM_WORLD_LOCAL_RANK" in os.environ:

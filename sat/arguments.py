@@ -41,9 +41,11 @@ def add_model_config_args(parser):
     group.add_argument("--prompts", type=str, help="Multiple prompts separated by semicolons")
     group.add_argument("--ref-token-idx", type=int, nargs="+", help="Reference token indices")
     group.add_argument("--cur-token-idx", type=int, nargs="+", help="Current token indices")
+    group.add_argument("--reweight-token-idx", type=int, nargs="+",help="Reweight token indices")
+    group.add_argument("--reweight-scale", type=float, help="Reweight scale")
     group.add_argument("--is-run-isolated", type=bool, default=False, help="If running isolated video for comparison")
     group.add_argument("--single-prompt-length", type=int, default=0, help="Length of single prompt")
-    
+
     return parser
 
 
@@ -300,7 +302,7 @@ def generate_output_path(args):
         'attn_map_step_idx', 'attn_map_layer_idx', 'mask_save_dir',
         'overlap_size', 'num_transition_blocks', 'longer_mid_segment',
         'ref_token_idx', 'cur_token_idx', 'prompts',
-        'single_prompt_length', 'is_edit'
+        'single_prompt_length', 'is_edit', 'reweight_token_idx', 'reweight_scale'
     ]
     
     clean_args = {k: getattr(args, k) for k in save_keys if hasattr(args, k)}
@@ -364,7 +366,7 @@ def process_config_to_args(args):
             'mask_save_dir', 'ref_token_idx', 'cur_token_idx', 
             'attn_map_step_idx', 'attn_map_layer_idx', 'thres',
             'num_prompts', 'num_transition_blocks', 'longer_mid_segment',
-            'is_edit'
+            'is_edit', 'reweight_token_idx', 'reweight_scale'
         ]
 
         for param in params_to_register:

@@ -189,7 +189,7 @@ def process_multi_prompt_video_with_adaln(model, args, c_total, uc_total,
 
     save_path = os.path.join(
             args.output_dir,
-            "MultiPrompt_"+ adaln_name,
+            "MultiPrompt",
         )
     if mpu.get_model_parallel_rank() == 0:
         save_video_as_grid_and_mp4(samples, save_path, fps=args.sampling_fps)

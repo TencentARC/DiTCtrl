@@ -1,0 +1,17 @@
+args:
+  seed: 42
+  output_dir: outputs/reweight_case/field_0p5
+  sampling_fps: 8
+  reweight_token_idx: 5 #night
+  reweight_scale: 0.5 
+
+  start_step: 0
+  end_step: 50
+  start_layer: 0
+  end_layer: 30
+  adaln_mixin_names:
+    - 'ReWeightAdaLNMixin'
+
+  prompts:
+    - "a field of flowers at night"
+    - "a field of flowers at night"

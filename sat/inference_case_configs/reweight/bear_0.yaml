@@ -1,0 +1,20 @@
+args:
+  seed: 42
+  output_dir: outputs/reweight_case/bear_0
+  sampling_fps: 8
+  reweight_token_idx: 0 #pink
+  reweight_scale: 0  
+  # Please see dit_video_concat.py: attn_batch of class ReWeightAdaLNMixin
+  # for more details about reweight_token_idx and reweight_scale
+  # if you use version 1, reweight_scale is used for add/sub
+  # if you use version 2, reweight_scale is used for multiply/divide
+  start_step: 0
+  end_step: 50
+  start_layer: 0
+  end_layer: 30
+  adaln_mixin_names:
+    - 'ReWeightAdaLNMixin'
+
+  prompts:
+    - "pink teddy bear wearing a cute pink bow tie"
+    - "pink teddy bear wearing a cute pink bow tie"
