@@ -82,21 +82,6 @@ Extensive experiments demonstrate that our method achieves state-of-the-art perf
 
 
 
-## 🚧 Todo
-
-<details><summary>Click for Previous todos </summary>
-
-- [x] Release Code based on <a href='https://github.com/THUDM/CogVideo'>CogVideoX-2B</a>
-- [x] Release paper on arxiv
-<!-- - [x] code refactoring -->
-</details>
-
-- [ ] Benchmark metrics and prompts
-- [ ] Release code of diffuser version of <a href='https://github.com/THUDM/CogVideo'>CogVideoX-2B</a>
-- [ ] Release code based on <a href='https://github.com/THUDM/CogVideo'>CogVideoX-5B</a>
-- [ ] Release code based on <a href='https://github.com/Tencent/HunyuanVideo'>HunyuanVideo</a>
-
-
 
 ## 🛡 Setup Environment
 Our method is tested using CUDA12, on a single A100 or V100.
@@ -282,6 +267,14 @@ The code is also provided, you can run this:
   bash run_visualize.sh
 ```
 
+## 🚧 Todo
+
+
+- [x] Release paper on arxiv
+- [x] Release Code based on <a href='https://github.com/THUDM/CogVideo'>CogVideoX-2B</a>
+- [x] Visualization of attention maps
+- [ ] Benchmark metrics
+- [ ] Diffuser version of DiTCtrl on CogVideoX-2B
 
 
 

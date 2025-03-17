@@ -29,7 +29,10 @@ args:
   mask_save_dir: ""               # save segmentation binary mask at this directory
 
   # For latent blending
-  # I usually use (overlap_size, num_transition_blocks) = (9, 2) or (6, 1), recently I found (9,2) is better than (6,1), because more overlap is more stable
+  # We usually use (overlap_size, num_transition_blocks) = (9, 2) or (6, 1), and recommend (9,2) for future comparisons
+  # Since CogVideoX-2B has 13 latent frames, we used (6,1) in our paper which is approximately 1/2 stride of the total frames (6/13 ≈ 1/2). All baseline methods were aligned to use the same relative stride for fair comparison. 
+  # Recently, we found that (9,2) configuration (approximately 1/4 stride) achieves even better quantitative results than (6,1). For future comparisons with our method, we recommend using (9,2) as it demonstrates superior performance compared to the metrics reported in the paper.
+  
   # The equation: total_segments = num_prompts + num_transition_blocks * (num_prompts - 1) + longer_mid_segment * (num_prompts - 2)
   overlap_size: 9
   num_transition_blocks: 2  # Gradually change semantics, mainly interpolating between different semantics at both ends

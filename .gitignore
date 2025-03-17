@@ -11,3 +11,4 @@ test*
 sat/CogVideoX-2b-sat/
 sat/CogVideoX-5b-sat/
 sat/outputs/
+sat/draw_map.py
